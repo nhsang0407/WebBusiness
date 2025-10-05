@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Ex 49 - Nguyễn Hoàng Sang</title>
+        <style type="text/css">
+            body {
+                background-color: lightcyan;
+            }
+            form {
+                background-color: cyan;
+                border: 1px solid blue;
+                width: 600px;
+                margin: 0px auto;
+                padding: 20px;
+            }
+            h1 {
+                color: red;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            hr {
+                background-color: chocolate;
+                height: 2px;
+                border: none;
+            }
+            ol {
+                font-size: 14px;
+            }
+            li {
+                margin: 10px 0;
+            }
+            table {
+                margin-left: 20px;
+            }
+            .checkbox-group label {
+                display: inline-block;
+                width: 180px;   /* mỗi ô cách đều 180px */
+            }
+            input[type="text"], input[type="date"] {
+                width: 200px;
+                padding: 4px;
+            }
+            button {
+                border: none;
+                background: none;
+                cursor: pointer;
+                margin-right: 20px;
+            }
+            button img {
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+        <script>
+            function searchSimu() {
+                alert("Search simulation");
+            }
+            function helpPage() {
+                window.open("Help.html", "_blank")
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h1>Online Classified Search Form</h1>
+            <hr/>
+            <ol>
+                <li><strong>Search for a classified in the following sections:</strong>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="radio" name="section" id="s1"/>
+                                <label for="s1">Employment</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="section" id="s2"/>
+                                <label for="s2">Personal</label><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="section" id="s3"/>
+                                <label for="s3">For Sale</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="section" id="s4"/>
+                                <label for="s4">Miscellanecus</label><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="section" id="s5"/>
+                                <label for="s5">Housing</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="section" id="s6"/>
+                                <label for="s6">All of the above</label>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <strong>Search the following publications:</strong><br/>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox"/> Midwest Times</label> <!--Tuong tu input + label for-->
+                        <label><input type="checkbox"/> Modern News</label>
+                        <label><input type="checkbox"/> Employment Today</label><br/>
+                        <label><input type="checkbox"/> Great Lakes Classifieds</label>
+                        <label><input type="checkbox"/> Middleton Daily</label>
+                        <label><input type="checkbox"/> Cashtown Daily News</label>
+                    </div>
+                </li>
+                <li>
+                    <strong>From </strong>
+                    <input type="date" name="date1" id="date1"/>
+                    <strong>to</strong>
+                    <input type="date" name="date2" id="date2"/>
+                </li>
+                <li>
+                    <strong>Enter a few keywords to describe the classified</strong><br/>
+                    <input type="text" name="keywords" id="keywords"/>
+                </li>
+                <li>
+                    <strong>Click one of the options below:</strong><br/>
+                    <button type="button" onclick="searchSimu()"><img src="Search.gif"/></button>
+                    <button type="button" onclick="helpPage()"><img src="Help.gif"/></button>
+                    <button type="reset"><img src="Cancel.gif"/></button>
+                </li>
+            </ol>
+        </form>
+    </body>
+</html>
