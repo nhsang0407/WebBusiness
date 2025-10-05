@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Ex 48 - Nguyễn Hoàng Sang</title>
+        <style type="text/css">
+            body{
+                background-color: deepskyblue;
+            }
+            div, h2{
+                text-align: center;
+            }
+            hr {
+                height: 1px;
+                background-color: chocolate;
+            }
+            table {
+                margin: 0 auto;
+            }
+            td {
+                padding: 5px;
+            }
+            button {
+                background-color: chocolate;
+                color: white;
+                border: none;
+                padding: 5px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: peru;
+            }
+        </style>
+        <script>
+            function regis()
+            {
+                alert("Registered successfully")
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <img src="images/Jackson.gif"/>
+        </div>
+        <h2>Registration Form</h2>
+        <form name="frm_registration">
+            <div>Register your Jackson Electronics product here</div>
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td colspan="2">
+                        <input type="text" name="fname" id="fname"/>
+                        Last Name:
+                        <input type="text" name="lname" id="lname"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address #1:</td>
+                    <td colspan="2">
+                        <input type="text" name="address1" id="address1"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address #2:</td>
+                    <td colspan="2">
+                        <input type="text" name="address2" id="address2"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td colspan="2">
+                        <input type="text" name="city" id="city"/>
+                        State
+                        <input type="text" name="state" id="state"/>
+                        Zip:
+                        <input type="text" name="zip" id="zip"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td colspan="2">
+                        <input type="text" name="country" id="country"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <hr/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Product:</td>
+                    <td colspan="2">
+                        <select name="product" id="product">
+                            <option>ScanMaster</option>
+                            <option>Laptop</option>
+                            <option>TV</option>
+                            <option>Phone</option>
+                            <option>Water</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date Purchased:</td>
+                    <td colspan="2">
+                        <input type="text" name="datep" id="datep"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Serial #:</td>
+                    <td colspan="2">
+                        <input type="text" name="seri" id="seri"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Used for:</td>
+                    <td>
+                        <input type="radio" name="used" id="use1"/>
+                        <label for="use1">Home</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="used" id="use2"/>
+                        <label for="use2">Educational Institution</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input type="radio" name="used" id="use3"/>
+                        <label for="use3">Business</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="used" id="use4"/>
+                        <label for="use4">Other</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input type="radio" name="used" id="use5"/>
+                        <label for="use5">Government</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>System (check all that apply)</td>
+                    <td>
+                        <input type="checkbox" name="windows" id="windows"/>
+                        <label for="windows">Windows</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="unix" id="unix"/>
+                        <label for="unix">UNIX</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input type="checkbox" name="macintosh" id="macintosh"/>
+                        <label for="macintosh">Macintosh</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="other" id="other"/>
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <hr/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Comments?:</td>
+                    <td colspan="2">
+                        <textarea cols="50" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;">
+                        <button type="button" onclick="regis()">Click to register</button>
+                        <button type="reset">Click to cancel</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
