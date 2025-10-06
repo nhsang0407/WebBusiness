@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Order Result</title>
+        <style>
+            body {
+                font-family: Arial;
+                background-color: #f8f8f8;
+                padding: 30px;
+            }
+            h2 {
+                color: #002855;
+            }
+            table {
+                border-collapse: collapse;
+                width: 400px;
+            }
+            td {
+                padding: 6px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Order Summary</h2>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            document.write("<table border='1'>");
+            document.write("<tr><td>Mouse Qty:</td><td>" + params.get("qty1") + "</td></tr>");
+            document.write("<tr><td>Mouse Total:</td><td>" + params.get("item1") + "$</td></tr>");
+            document.write("<tr><td>Keyboard Qty:</td><td>" + params.get("qty2") + "</td></tr>");
+            document.write("<tr><td>Keyboard Total:</td><td>" + params.get("item2") + "$</td></tr>");
+            document.write("<tr><td>USB Qty:</td><td>" + params.get("qty3") + "</td></tr>");
+            document.write("<tr><td>USB Total:</td><td>" + params.get("item3") + "$</td></tr>");
+            document.write("<tr><td><b>Grand Total:</b></td><td><b>" + params.get("result") + "$</b></td></tr>");
+            document.write("</table>");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Ex 52 - Nguyễn Hoàng Sang</title>
+        <style type="text/css">
+            button{
+                background-color: red;
+                color: white;
+                cursor: pointer;
+                border: none;
+                height: 50px;
+                width: 100px;
+                font-size: 14pt;
+            }
+            td{
+                padding: 3px;
+            }
+            textarea{
+                width: 400px; 
+                height: 200px;
+            }
+            input[type="text"], select
+            {
+                width: 100%;
+            }
+        </style>
+        <script>
+            function send()
+            {
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frm_contact"
+            action="process_send.html"
+            method="get"        
+        >
+            <h3>Contact the editorial office</h3>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <div>Full name</div>
+                        <input type="text" name="name" id="name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>Email</div>
+                        <input type="text" name="email" id="email"/>
+                    </td>
+                    <td>
+                        <div>Send to</div>
+                        <select name="send">
+                            <option>Editorial board</option>
+                            <option>News Department</option>
+                            <option>Board of Perspectives</option>
+                            <option>World Board</option>
+                            <option>Business Department</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div>Title</div>
+                        <input type="text" name="title" id="title"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div>Content</div>
+                        <textarea name="content" id="content"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Send</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

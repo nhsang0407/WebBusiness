@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Ex 53 - Nguyễn Hoàng Sang</title>
+        <style>
+            fieldset {
+                width: 800px;
+                margin: 20px auto;
+                border: 2px solid #002855;
+                padding: 10px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 8px;
+                text-align: center;
+            }
+            input[type="text"] {
+                width: 90%;
+                padding: 4px;
+            }
+            #result {
+                width: 95%;
+                padding: 5px;
+                text-align: right;
+            }
+            button {
+                width: 60%;
+                background-color: orange;
+                border-color: orangered;
+                color: white;
+                font-size: 18px;
+                padding: 8px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: darkorange;
+            }
+        </style>
+        <script>
+            function calc_sum()
+            {
+                // Lấy giá trị số lượng
+                let q1 = parseFloat(document.getElementById("qty1").value) || 0;
+                let q2 = parseFloat(document.getElementById("qty2").value) || 0;
+                let q3 = parseFloat(document.getElementById("qty3").value) || 0;
+
+                // Tính từng item
+                let i1 = q1 * 19.95;
+                let i2 = q2 * 29.95;
+                let i3 = q3 * 39.95;
+
+                // Gán giá trị vào ô item tương ứng
+                document.getElementById("item1").value = i1.toFixed(2);
+                document.getElementById("item2").value = i2.toFixed(2);
+                document.getElementById("item3").value = i3.toFixed(2);
+
+                // Tính tổng
+                let total = i1 + i2 + i3;
+                document.getElementById("result").value = total.toFixed(2);
+
+                // Khi bấm Sum, gửi qua GET đến result.html
+                let form = document.getElementById("frm_list");
+                form.action = "result.html";
+                form.method = "get";
+                form.target = "_blank";
+                form.submit();
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frm_list" id="frm_list">
+            <fieldset>
+                <table>
+                    <tr>
+                        <th>Part Number</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Item table</th>
+                    </tr>
+                    <tr>
+                        <td>C112</td>
+                        <td>Mouse</td>
+                        <td>19.95$</td>
+                        <td><input type="text" name="qty1" id="qty1"/></td>
+                        <td><input type="text" name="item1" id="item1"/></td>
+                    </tr>
+                    <tr>
+                        <td>B124</td>
+                        <td>Keyboard US</td>
+                        <td>29.95$</td>
+                        <td><input type="text" name="qty2" id="qty2"/></td>
+                        <td><input type="text" name="item2" id="item2"/></td>
+                    </tr>
+                    <tr>
+                        <td>U125</td>
+                        <td>USB KingMax</td>
+                        <td>39.95$</td>
+                        <td><input type="text" name="qty3" id="qty3"/></td>
+                        <td><input type="text" name="item3" id="item3"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <hr/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: right;">Total: </td>
+                        <td>
+                            <input type="text" name="result" id="result"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">&nbsp;</td>
+                        <td style="text-align: right; padding-right: 14px;">
+                            <button type="button" onclick="calc_sum()">Sum</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </body>
+</html>

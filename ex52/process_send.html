@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Send - Nguyễn Hoàng Sang</title>
+    </head>
+    <body>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            document.write("<b>Full name:</b> " + params.get("name") + "<br>");
+            document.write("<b>Email:</b> " + params.get("email") + "<br>");
+            document.write("<b>Send to:</b> " + params.get("send") + "<br>");
+            document.write("<b>Title:</b> " + params.get("title") + "<br>");
+            document.write("<b>Content:</b> " + params.get("content") + "<br>");
+        </script>
+    </body>
+</html>
