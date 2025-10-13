@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Nguyễn Hoàng Sang</title>
+        <script type="text/javascript">
+            function Sum(a,b)
+            {
+                ketqua=eval(a)+eval(b)
+                //alert(ketqua)
+                result=document.getElementById("result")
+                result.innerText=ketqua
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Hệ số a:</td>
+                <td>
+                    <input type="text" id="hsa"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Hệ số b:</td>
+                <td>
+                    <input type="text" id="hsb"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Result:</td>
+                <td id="result"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <button type="button" onclick="Sum(hsa.value,hsb.value)">Sum</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

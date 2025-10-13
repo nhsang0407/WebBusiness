@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Demo Object</title>
+        <script type="text/javascript">
+            person={
+                FirstName:"Linh",
+                LastName:"Nguyen",
+                Age:20,
+                getFullName:function()
+                {
+                    return this.FirstName+" "+this.LastName
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            function load_info()
+            {
+                document.getElementById("firstname").innerText=person.FirstName
+                document.getElementById("lastname").innerText=person.LastName
+                document.getElementById("age").innerText=person.Age
+                document.getElementById("fullname").innerText=person.getFullName()
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick="load_info()">Load Person Info</button>
+        <table border="1">
+            <tr>
+                <td>First Name:</td>
+                <td id="firstname"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td id="lastname"></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td id="age"></td>
+            </tr>
+            <tr>
+                <td>Full Name:</td>
+                <td id="fullname"></td>
+            </tr>
+        </table>
+    </body>
+</html>

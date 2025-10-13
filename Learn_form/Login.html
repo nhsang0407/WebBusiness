@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Login - Nguyễn Hoàng Sang</title>
+        <script>
+            function open_itbclub()
+            {
+                alert("Ban muon mo website clb itb ha?")
+                window.open("https://itbclub.uel.edu.vn","_blank")
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frm_login"
+            action="processlogin.html"
+            method="get"
+        >  <!-- ko xai get cho login -->
+        <fieldset>
+            <legend>Login HR system</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="username">
+                            User Name:
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" name="username" id="username"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                        <input type="password" name="matkhau" id="matkhau"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input type="checkbox" name="save" id="save"/>
+                        <label for="save">
+                            Save login infor
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <button type="submit">Login</button>
+                        <button type="reset">Reset</button>
+                        <button type="button" onclick="open_itbclub()">Open ItbClub</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Demo Table DOM</title>
+        <script type="text/javascript">
+            function AddProduct()
+            {
+                tbody=document.getElementById("tablebody")
+
+                tr=document.createElement("tr")
+
+                tdProductId=document.createElement("td")
+                tdProductId.innerHTML=frmProduct.productid.value
+                tr.appendChild(tdProductId)
+
+                tdProductName=document.createElement("td")
+                tdProductName.innerHTML=frmProduct.productname.value
+                tr.appendChild(tdProductName)
+
+                tdUnitPrice=document.createElement("td")
+                tdUnitPrice.innerHTML=frmProduct.unitprice.value
+                tr.appendChild(tdUnitPrice)
+
+                tbody.appendChild(tr)
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frmProduct">
+            <table border="1">
+                <tr>
+                    <td>Product ID:</td>
+                    <td>
+                        <input type="text" id="productid"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Product Name:</td>
+                    <td>
+                        <input type="text" id="productname"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Unit Price:</td>
+                    <td>
+                        <input type="text" id="unitprice"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="button" onclick="AddProduct()">Add Product</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <table border="1">
+            <caption>List Product</caption>
+            <thead>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+            </thead>
+            <tbody id="tablebody">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Design by Sang</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

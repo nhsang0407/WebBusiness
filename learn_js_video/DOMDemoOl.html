@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Demo Ol</title>
+        <script type="text/javascript">
+            var dataset=["Cà phê","Chè","Tiêu"]
+        </script>
+    </head>
+    <body>
+        <ol id="myol"></ol>
+        <script type="text/javascript">
+            //Bước 1:
+            ol=document.getElementById("myol")
+            
+            for(i=0;i<dataset.length;i++)
+            {
+                item=dataset[i]
+                //Bước 2:
+                li=document.createElement("li")
+                //Bước 3: thiết lập thuộc tính cho element
+                li.innerText=item
+                //Bước 4:
+                ol.appendChild(li)
+            }
+        </script>
+    </body>
+</html>

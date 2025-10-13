@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Demo DOM cho Img</title>
+        <script type="text/javascript">
+            function doihinh(link)
+            {
+                img=document.getElementById("myimg")
+                img.setAttribute("src",link)
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick="doihinh('images/490A7392.jpg')">Hình 1</button>
+        <button type="button" onclick="doihinh('images/490A7493.jpg')">Hình 2</button>
+        <br/>
+        <img id="myimg" src="" alt="Chưa có hình" width="800" height="500"/>
+    </body>
+</html>

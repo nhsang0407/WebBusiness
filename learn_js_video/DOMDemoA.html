@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Nguyễn Hoàng Sang</title>
+    </head>
+    <body>
+        <div id="titleholder"></div>
+        <script type="text/javascript">
+            //Bước 1: Truy suất id holder
+            div=document.getElementById("titleholder")
+            //Bước 2: Tạo HTML Element
+            a=document.createElement("a")
+            //Bước 3: Thiết lập thông số cho thuộc tính của HTML Element
+            a.innerText="https://uel.edu.vn"
+            a.setAttribute("style","font-size:20;color:blue")
+            a.setAttribute("href","https://uel.edu.vn")
+            a.setAttribute("target","_blank")
+            //Bước 4: Đưa HTML Element lên web (holder)
+            div.appendChild(a)
+        </script>
+    </body>
+</html>
