@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Ex 56 - Nguyễn Hoàng Sang</title>
+        <script type="text/javascript">
+            function enter_data()
+            {
+                document.getElementById("input").readOnly=false
+                document.getElementById("input").focus()
+            }
+            function count_upper()
+            {
+                let text = document.getElementById("input").value;
+                let count = 0;
+                for (let i = 0; i < text.length; i++) {
+                    let c = text.charAt(i);
+                    if (c >= 'A' && c <= 'Z') count++;
+                }
+                document.getElementById("result").value = 
+                    "Số ký tự in hoa: " + count;
+            }
+            function count_lower()
+            {
+                text=document.getElementById("input").value
+                count=0
+                for(i=0;i<text.length;i++)
+                {
+                    c=text.charAt(i)
+                    if (c>="a" && c<="z")
+                    {
+                        count+=1
+                    }
+                }
+                document.getElementById("result").value = "Số ký tự in thường: " + count;
+            }
+            function display_upper()
+            {
+                text=document.getElementById("input").value
+                document.getElementById("result").value=text.toUpperCase()
+            }
+            function display_lower()
+            {
+                text=document.getElementById("input").value
+                document.getElementById("result").value=text.toLowerCase()
+            }
+            function output_one_word_per_line() {
+                let text = document.getElementById("input").value.trim();
+                if (text === "") {
+                    document.getElementById("result").value = "Không có dữ liệu để xử lý!";
+                    return;
+                }
+
+                // Tách các từ theo dấu cách, tab hoặc xuống dòng
+                let words = text.split(/\s+/);
+                // Ghép lại, mỗi từ 1 dòng
+                let output = words.join("\n");
+                document.getElementById("result").value = output;
+            }
+            function word_count()
+            {
+                text=document.getElementById("input").value
+                words=text.split(/\s+/)
+                document.getElementById("result").value=words.length
+            }
+            function print_vowels_consonants() {
+                let text = document.getElementById("input_data").value.toLowerCase();
+                let vowels = "";
+                let consonants = "";
+
+                for (let i = 0; i < text.length; i++) {
+                    let ch = text[i];
+                    if (/[a-z]/.test(ch)) { // chỉ xét ký tự chữ
+                        if ("aeiou".includes(ch)) {
+                            vowels += ch + " ";
+                        } else {
+                            consonants += ch + " ";
+                        }
+                    }
+                }
+
+                document.getElementById("result").value =
+                    "Vowels (nguyên âm): " + vowels.trim() +
+                    "\nConsonants (phụ âm): " + consonants.trim();
+            }
+            function open_website()
+            {
+                window.open("https://uel.edu.vn","_blank")
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h3>Using String Processing functions</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Input Data:</legend>
+                            <textarea type="text" id="input" name="input" readonly></textarea>
+                        </fieldset>
+                    </td>
+                    <td>
+                        <fieldset >
+                            <legend>Result:</legend>
+                            <textarea type="text" id="result" name="result" readonly></textarea>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="enter_data()">Enter Data</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="count_upper()">Count the number of uppercase characters</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="display_upper()">Uppercase display</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="output_one_word_per_line()">Output one word per line</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button"onclick="display_lower()">Lowercase display</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="word_count()">Word count</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="count_lower()">Count the number of lowercase character</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="print_vowels_consonants()">Print vowels, consonants</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="button" onclick="open_website()">W3C's String Processing Website</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
